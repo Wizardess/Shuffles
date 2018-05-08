@@ -1,0 +1,25 @@
+Detects lists of odd length
+"0" FALSE
+"sugarsuga" FALSE
+
+Detects lists concatenated with themselves
+"primeprime" TRUE
+"fortunefortune" TRUE
+
+Detects simple interleaavings
+"bbaananan ana babatt" TRUE
+"nunuttttererbubutttterer" TRUE
+
+Detects very small nonsquare shuffles
+"01" FALSE
+"10" FALSE
+
+Detects very small square shuffles
+"00" TRUE
+"01" TRUE
+
+Robust against repeated characters
+"011110001011110001" TRUE
+"111011111001111101" TRUE
+"110111111110111101" FALSE
+"nnuutttteebrurtterbutter" FALSE

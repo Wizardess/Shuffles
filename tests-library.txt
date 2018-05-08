@@ -1,0 +1,74 @@
+
+Detects lists concatenated with themselves
+    "lattelatte"
+    TRUE
+    "0000111100001111"
+    TRUE
+    "a lion a day keeps the doctor at bay a lion a day keeps the doctor at bay "
+    TRUE
+
+
+Detects lists of odd length
+    "001"
+    FALSE
+    "010"
+    FALSE
+    "100"
+    FALSE
+    "Were no strWe'raeng neros  strto alovnegers to love"
+    FALSE
+
+Detects simple interleavings*
+    "bbaananan ana babatt"
+    TRUE
+    "nanananananaanna"*
+    TRUE
+    "NNeevveerr  ggoonnaa  ggiivvee  yyoouu  uupp"
+    TRUE
+
+
+Detects small nonsquare shuffles
+    "01"
+    FALSE
+    "10"
+    FALSE
+
+Detects small square shuffles
+    "11"
+    TRUE
+    "00"
+    TRUE
+
+Detects large nonsquare shuffles
+    "IGo juttst a wanmaken youa  unteldel rstyandou how I'm feeling"
+    FALSE
+
+Detects large square shuffles
+    "NNever gonevena telrl a gon liena to  telhl a urt ylouie to hurt you"
+
+Robust against repeated characters
+    "NNeevveerr  ggoonnaa  ggiivvee  yyoouu  uupp"
+    TRUE
+    "NeNevever r gogonnnnaa  lelet t yoyou u dodownwn"
+    TRUE
+    "bannan bot  abanneana boat ban"
+    FALSE
+    "allaitellritaertiaon titieoratin itoenration"
+    TRUE
+    "nutterbutter"
+
+    "011110001011110001"
+    TRUE
+    "jellybelly"
+    "timeywimey"
+
+
+testcase1 = "lattelatte"
+testcase2 = "shuffle nn whuffleshuffle nn whuffle"
+testcase3 = "never gonna never gonna "
+testcase4 = "a lion a day keeps the doctor at bay a lion a day keeps the doctor at bay "
+testcase5 = "nanananananaanna"
+testcase6 = "1101100010"
+testcase7 = "Never gonna give you up Never gonna give you up "
+testcase8 = "Never gonna let you down Never gonna let you down "
+testcase9 = "IGo juttst a wanmaken youa  unteldel rstyandou how I'm feeling"
